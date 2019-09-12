@@ -1,0 +1,20 @@
+{
+  "name": "node_server_template",
+  "version": "1.0.0",
+  "description": "Boiler plate setup for an Express server. With Mocha and chai",
+  "main": "server/app.js",
+  "dependencies": {
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.2.0"
+  },
+  "scripts": {
+    "test": "mocha",
+    "server": "cd ./server; node app.js"
+  },
+  "author": "Omar Elbanby",
+  "license": "ISC"
+}
