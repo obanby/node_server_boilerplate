@@ -4,6 +4,7 @@
   "description": "Boiler plate setup for an Express server. With Mocha and chai",
   "main": "server/app.js",
   "dependencies": {
+    "@elbanby/loggy": "^2.0.0",
     "dotenv": "^8.1.0",
     "express": "^4.17.1"
   },

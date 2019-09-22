@@ -4,19 +4,16 @@ const bodyParser = require('body-parser');
 // NPM
 const express = require("express");
 const dotEnv = require("dotenv").config();
+const Loggy = require("@elbanby/loggy");
 // Custom modules
 const api = require("./api/v1/api");
 
 const app = express();
 
-// TODO: import logging and error handling custom lib here
-if (dotEnv.error) {
-    throw Error(JSON.stringify({
-        message: "dotenv configuration failed to load",
-        error: dotEnv.error,
-        module: "app.js"
-    })).toString();
-}
+ if (dotEnv.error) {
+     Loggy.error("dotenv configuration failed to load", dotEnv.error, __filename);
+     process.exit(1);
+ }
 
 const PUBLIC = path.resolve(".", "public");
 
